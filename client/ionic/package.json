@@ -28,9 +28,9 @@
     "typescript": "3.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "EXTEND_ESLINT=true react-scripts start",
+    "build": "EXTEND_ESLINT=true react-scripts build",
+    "test": "EXTEND_ESLINT=true react-scripts test",
     "eject": "react-scripts eject",
     "check": "gts check",
     "cleanbuild": "gts clean",
@@ -41,7 +41,7 @@
     "posttest": "npm run check"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "./node_modules/gts"
   },
   "browserslist": {
     "production": [
