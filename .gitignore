@@ -19,6 +19,7 @@ out/
 # Note: Android Studio is a modified version of IntelliJ
 *.iws
 
+key.properties
 
 # COCOAPODS
 Pods
