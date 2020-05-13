@@ -41,3 +41,11 @@ jobs:
       - run: flutter build appbundle
         working-directory: ./client/app
       - run: git diff --exit-code
+      - name: Publish to Firebase App Distribution
+        if: {{ github.ref == 'refs/head/master' }}
+        run: |
+          flutter build apk
+          cd android
+          gem install bundler
+          bundle exec fastlane distribute
+        working-directory: ./client/app
