@@ -41,6 +41,7 @@ jobs:
       - run: flutter build appbundle
         working-directory: ./client/app
       - run: git diff --exit-code
+      - run: echo ${GITHUB_REF}
       - name: Publish to Firebase App Distribution
         if: github.ref == 'refs/head/master'
         run: |
